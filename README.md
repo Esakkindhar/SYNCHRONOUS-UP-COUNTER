@@ -1,14 +1,16 @@
-### SYNCHRONOUS-UP-COUNTER
+### NAME : Esakkindhar A
+### REG. NO. : 24001907
+### EXPIREMENT7 :  IMPLEMENTATION OF SYNCHRONOUS UP COUNTER
 
-**AIM:**
+# AIM :
 
 To implement 4 bit synchronous up counter and validate functionality.
 
-**SOFTWARE REQUIRED:**
+# SOFTWARE REQUIRED :
 
 Quartus prime
 
-**THEORY**
+# THEORY :
 
 **4 bit synchronous UP Counter**
 
@@ -26,21 +28,43 @@ Since the first (LSB) flip-flop needs to toggle at every clock pulse, its J and 
 The next flip-flop need only “recognize” that the first flip-flop’s Q output is high to be made ready to toggle, so no AND gate is needed.
 However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are “high,” thus the need for AND gates.
 
-**Procedure**
+# PROCEDURE :
 
-/* write all the steps invloved */
+1: Create a New Project:
+ Open Intel Quartus Prime
+ Go to File > New Project Wizard and follow the prompts:
+ Set the project directory.
+ Name the project (e.g., Exp7).
+ Click Finish       
+2: Write the Verilog Code for the Counter
+ Create a new Verilog file:
+ Go to File > New > Design Files > Verilog HDL File.
+ Write the Verilog code for a 4-bit synchronous up counter.
+ Save the file with a .v extension (e.g., Exp7.v).         
+3: Compile the Design:
+ Go to Processing > Start Compilation or click the Compile button.
+ Wait for the compilation process to complete and ensure there are no errors.         
+4: Create the waveform:
+ Go to File > New > University Program VWF.
+ Run the waveform inputs in ModelSim with Quartus.           
+5: Obtain the result.
 
-**PROGRAM**
+# PROGRAM : 
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+![Screenshot 2024-12-23 113830](https://github.com/user-attachments/assets/0d68d513-4bce-4ed1-a442-bcebfcee4f91)
 
-Developed by: RegisterNumber:
-*/
+# RTL :
 
-**RTL LOGIC UP COUNTER**
+![Screenshot 2024-12-23 113943](https://github.com/user-attachments/assets/71778ad5-543c-46e0-8cb9-fc1e9ba7dce2)
 
-**TIMING DIAGRAM FOR IP COUNTER**
+# TIMING DIAGRAM FOR IP COUNTER :
 
-**TRUTH TABLE**
+![Screenshot 2024-12-23 114534](https://github.com/user-attachments/assets/f789a66f-188f-4cd9-bbac-3d3a87c4cdd7)
 
-**RESULTS**
+# TRUTH TABLE  :
+
+![Screenshot 2024-12-23 202329](https://github.com/user-attachments/assets/cb15443f-a807-40e1-a8a1-b5024976b5d5)
+
+# RESULTS :
+
+ Implementation of 4 bit synchronous up counter is verified and its function is validated.
