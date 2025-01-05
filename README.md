@@ -1,16 +1,14 @@
-### NAME : Esakkindhar A
-### REG. NO. : 24001907
-### EXPIREMENT7 :  IMPLEMENTATION OF SYNCHRONOUS UP COUNTER
-
-# AIM :
+### SYNCHRONOUS-UP-COUNTER
+# DATE : 10/12/2024
+**AIM:**
 
 To implement 4 bit synchronous up counter and validate functionality.
 
-# SOFTWARE REQUIRED :
+**SOFTWARE REQUIRED:**
 
 Quartus prime
 
-# THEORY :
+**THEORY**
 
 **4 bit synchronous UP Counter**
 
@@ -28,43 +26,52 @@ Since the first (LSB) flip-flop needs to toggle at every clock pulse, its J and 
 The next flip-flop need only “recognize” that the first flip-flop’s Q output is high to be made ready to toggle, so no AND gate is needed.
 However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are “high,” thus the need for AND gates.
 
-# PROCEDURE :
+**Procedure**
 
-1: Create a New Project:
- Open Intel Quartus Prime
- Go to File > New Project Wizard and follow the prompts:
- Set the project directory.
- Name the project (e.g., Exp7).
- Click Finish       
-2: Write the Verilog Code for the Counter
- Create a new Verilog file:
- Go to File > New > Design Files > Verilog HDL File.
- Write the Verilog code for a 4-bit synchronous up counter.
- Save the file with a .v extension (e.g., Exp7.v).         
-3: Compile the Design:
- Go to Processing > Start Compilation or click the Compile button.
- Wait for the compilation process to complete and ensure there are no errors.         
-4: Create the waveform:
- Go to File > New > University Program VWF.
- Run the waveform inputs in ModelSim with Quartus.           
-5: Obtain the result.
+1.Initialize the shift register to a known state (e.g., all zeros).
 
-# PROGRAM : 
+2.Input a bit serially into the shift register.
 
-![Screenshot 2024-12-23 113830](https://github.com/user-attachments/assets/0d68d513-4bce-4ed1-a442-bcebfcee4f91)
+3.Shift the contents of the register one position to the right (or left).
 
-# RTL :
+4.Output the shifted bit from the last stage of the register.
 
-![Screenshot 2024-12-23 113943](https://github.com/user-attachments/assets/71778ad5-543c-46e0-8cb9-fc1e9ba7dce2)
+5.Repeat steps 2-4 for each bit you want to input and shift. PROGRAM
 
-# TIMING DIAGRAM FOR IP COUNTER :
+**PROGRAM**
 
-![Screenshot 2024-12-23 114534](https://github.com/user-attachments/assets/f789a66f-188f-4cd9-bbac-3d3a87c4cdd7)
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+```
+module e11(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
+```
 
-# TRUTH TABLE  :
+**Developed by: Esakkindhar
+RegisterNumber:24900980**
 
-![Screenshot 2024-12-23 202329](https://github.com/user-attachments/assets/cb15443f-a807-40e1-a8a1-b5024976b5d5)
 
-# RESULTS :
+**RTL LOGIC UP COUNTER**
+![image](https://github.com/user-attachments/assets/30712dd0-110d-4593-8d18-2bbeff099af3)
 
- Implementation of 4 bit synchronous up counter is verified and its function is validated.
+
+**TIMING DIAGRAM FOR UP COUNTER**
+![image](https://github.com/user-attachments/assets/21412429-7964-4386-8dac-a45b56575f34)
+
+
+# TRUTH TABLE
+![WhatsApp Image 2024-12-20 at 13 54 25_e0b74ae2](https://github.com/user-attachments/assets/f3de6d8b-d058-46b1-ae18-49060b3b49fb)
+
+
+**RESULTS**
+ Hence a 4 bit synchronous up counter is implemented correctly and program code is successfully executed.
+
+
